@@ -5,7 +5,7 @@
   <f7-panel left cover dark :visible-breakpoint="960">
     <f7-view>
       <f7-page>
-        <f7-navbar title="Left Panel"></f7-navbar>
+        <f7-navbar title="panel izquierdo"></f7-navbar>
         <f7-block-title>Left View Navigation</f7-block-title>
         <f7-list>
           <f7-list-item link="/left-page-1/" title="Left Page 1"></f7-list-item>
