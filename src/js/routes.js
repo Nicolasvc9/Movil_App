@@ -9,10 +9,13 @@ import DynamicRoutePage from '../pages/dynamic-route.vue';
 import RequestAndLoad from '../pages/request-and-load.vue';
 import NotFoundPage from '../pages/404.vue';
 
+import Login from '../pages/login.vue'
+
 var routes = [
   {
     path: '/',
-    component: HomePage,
+    component: Login
+    // component: HomePage,
   },
   {
     path: '/about/',
