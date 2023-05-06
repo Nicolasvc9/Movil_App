@@ -1,5 +1,6 @@
 <template>
   <f7-page name="login">
+    <f7-navbar title="Inciar Sesion" back-link="Back"></f7-navbar>
     <f7-block>
       <h3>Login</h3>
     </f7-block>
