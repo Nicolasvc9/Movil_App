@@ -5,17 +5,21 @@
   <f7-panel left cover dark :visible-breakpoint="960">
     <f7-view>
       <f7-page>
-        <f7-navbar title="left"></f7-navbar>
-        <f7-block-title>Left View Navigation</f7-block-title>
+        <f7-navbar title="TechCel"></f7-navbar>
+        <f7-block-title>Productos</f7-block-title>
         <f7-list>
-          <f7-list-item link="/left-page-1/" title="Left Page 1"></f7-list-item>
-          <f7-list-item link="/left-page-2/" title="Left Page 2"></f7-list-item>
+          <f7-list-item link="/phones/" view=".view-main" panel-close title="Celulares"></f7-list-item>
+          <f7-list-item link="/accessories/" view=".view-main" panel-close title="Accesosrios"></f7-list-item>
+          <f7-list-item link="/earphones/" view=".view-main" panel-close title="Audifonos"></f7-list-item>
         </f7-list>
-        <f7-block-title>Control Main View</f7-block-title>
+        <f7-block-title>Nosotros</f7-block-title>
         <f7-list>
-          <f7-list-item link="/about/" view=".view-main" panel-close title="About"></f7-list-item>
-          <f7-list-item link="/form/" view=".view-main" panel-close title="Form"></f7-list-item>
-          <f7-list-item link="#" view=".view-main" back panel-close title="Back in history"></f7-list-item>
+          <f7-list-item link="/about/" view=".view-main" panel-close title="Empresa"></f7-list-item>
+        </f7-list>
+        <f7-block-title>Ingresar</f7-block-title>
+        <f7-list>
+          <f7-list-item link="/login/" view=".view-main" panel-close title="Iniciar Sesion"></f7-list-item>
+          <f7-list-item link="/form/" view=".view-main" panel-close title="Registrase"></f7-list-item>
         </f7-list>
       </f7-page>
     </f7-view>

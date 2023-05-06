@@ -139,3 +139,14 @@ AC AdapterIPHONE: iPhone 14 Pro Max, iPhone 14 Pro, iPhone 14 Plus, iPhone 14, i
     </f7-page>
   </f7-page>
 </template>
+<script>
+import { f7Navbar, f7Page, f7BlockTitle } from 'framework7-vue';
+
+export default {
+  components: {
+    f7Navbar,
+    f7Page,
+    f7BlockTitle,
+  },
+};
+</script>
