@@ -14,8 +14,8 @@ import Login from '../pages/login.vue'
 var routes = [
   {
     path: '/',
-    component: Login
-    // component: HomePage,
+    //component: Login
+    component: HomePage,
   },
   {
     path: '/about/',

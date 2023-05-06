@@ -6,67 +6,63 @@
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
       </f7-nav-left>
       <f7-nav-title sliding>myapp</f7-nav-title>
+      <!--filtrar busqueda de acuerdo con los productos-->
       <f7-nav-right>
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="right"></f7-link>
+        <f7-link class="searchbar-enable" data-searchbar=".searchbar-demo" icon-ios="f7:search"
+          icon-md="material:search" />
       </f7-nav-right>
-      <f7-nav-title-large>myapp</f7-nav-title-large>
+      <f7-searchbar class="searchbar-demo" expandable search-container=".search-list" search-in=".item-title" />
+      <f7-list strong-ios outline-ios dividers-ios class="searchbar-not-found">
+        <f7-list-item title="Nothing found" />
+      </f7-list>
+      <f7-nav-title-large>
+        <center>TechCel</center>
+      </f7-nav-title-large>
     </f7-navbar>
     <!-- Toolbar-->
     <f7-toolbar bottom>
-      <f7-link>Left Link</f7-link>
-      <f7-link>Right Link</f7-link>
+      <f7-link></f7-link>
+      <f7-link></f7-link>
     </f7-toolbar>
     <!-- Page content-->
-    <f7-block strong>
-      <p>This is an example of split view application layout, commonly used on tablets. The main approach of such kind of layout is that you can see different views at the same time.</p>
-
-      <p>Each view may have different layout, different navbar type (dynamic, fixed or static) or without navbar.</p>
-
-      <p>The fun thing is that you can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
-    </f7-block>
-    <f7-block-title>Navigation</f7-block-title>
-    <f7-list>
-      <f7-list-item link="/about/" title="About"></f7-list-item>
-      <f7-list-item link="/form/" title="Form"></f7-list-item>
-    </f7-list>
-
-    <f7-block-title>Modals</f7-block-title>
-    <f7-block strong>
-      <f7-row>
-        <f7-col width="50">
-          <f7-button fill raised popup-open="#my-popup">Popup</f7-button>
-        </f7-col>
-        <f7-col width="50">
-          <f7-button fill raised login-screen-open="#my-login-screen">Login Screen</f7-button>
-        </f7-col>
-      </f7-row>
-    </f7-block>
-
-    <f7-block-title>Panels</f7-block-title>
-    <f7-block strong>
-      <f7-row>
-        <f7-col width="50">
-          <f7-button fill raised panel-open="left">Left Panel</f7-button>
-        </f7-col>
-        <f7-col width="50">
-          <f7-button fill raised panel-open="right">Right Panel</f7-button>
-        </f7-col>
-      </f7-row>
-    </f7-block>
-
-    <f7-list>
-      <f7-list-item
-        title="Dynamic (Component) Route"
-        link="/dynamic-route/blog/45/post/125/?foo=bar#about"
-      ></f7-list-item>
-      <f7-list-item
-        title="Default Route (404)"
-        link="/load-something-that-doesnt-exist/"
-      ></f7-list-item>
-      <f7-list-item
-        title="Request Data & Load"
-        link="/request-and-load/user/123456/"
-      ></f7-list-item>
-    </f7-list>
+    <f7-page>
+      <f7-block-title>MOBILES</f7-block-title>
+      <f7-list media-list dividers-ios strong-ios outline-ios>
+        <f7-list-item link="#" title="iPhone 14 Pro" after="$1.000" subtitle="Apple"
+          text="Una manera mágica de interactuar con tu iPhone. Una funcionalidad de seguridad diseñada para salvar vidas. Una innovadora cámara gran angular de 48 MP. Y una pantalla hasta dos veces más brillante bajo el sol.◊Consultar los avisos legales Todo gracias a la potencia del ultrarrápido chip A16 Bionic.">
+          <template #media>
+            <img style="border-radius: 8px"
+              src="https://lh3.googleusercontent.com/PN7U9AA1v_BYPG5kLhZOMjINsFXK0SXqKXUXxlutI_81ovOI61jxUM-jDxk_jLnvhjUXbw2NmfCtvHHqceDEgWFQyBgTFfpxSy4jtytX"
+              width="80" />
+          </template>
+        </f7-list-item>
+        <f7-list-item link="#" title="Galaxy S23 Ultra 5G" after="$1.000" subtitle="samsung"
+          text="Ahora es más fácil que nunca configurar tu smartphone solo para ti. One UI maximiza la personalización, lo que te permite elegir casi todos los detalles, desde pantallas de bloqueo y temas hasta widgets y notificaciones.">
+          <template #media>
+            <img style="border-radius: 8px"
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSUWNXO2IdzQHe2Y0CXmLu7nn3JLoMjIe74-TPmaAvIlDLBgZS0"
+              width="80" />
+          </template>
+        </f7-list-item>
+        <f7-list-item link="#" title="Xiaomi 12T Pro" after="$1.000" subtitle="Xiaomi"
+          text="La ampliación de memoria solo está disponible cuando hay suficiente espacio de almacenamiento en el dispositivo.
+La garantía no cubre mal uso por golpes y/o humedad, mala actualización del sistema y/o cualquier otro caso de mal uso del dispositivo.
+El almacenamiento y la RAM disponibles son inferiores a la memoria total debido al almacenamiento del sistema operativo y el software preinstalado en el dispositivo.">
+          <template #media>
+            <img style="border-radius: 8px"
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRoPcxWYidXeJ2jIxSM_kXb2-U-uTm5dNgipmJAnvS08fbGvfXP"
+              width="80" />
+          </template>
+        </f7-list-item>
+        <f7-list-item link="#" title="Motorola Edge 30 Ultra" after="$1.000" subtitle="Motorola"
+          text="El nuevo motorola edge 30 ultra viene con la plataforma móvil Snapdragon líder en la industria y más avanzada hasta el momento. La plataforma móvil Snapdragon 8+ Gen 1 lidera el camino hacia una nueva era de tecnología móvil premium equipada con 5G">
+          <template #media>
+            <img style="border-radius: 8px"
+              src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpl86IvxZE39FA-m87cmOpgSJ1RsD_0NlLQDeyNxZ3d8MW1WtH"
+              width="80" />
+          </template>
+        </f7-list-item>
+      </f7-list>
+    </f7-page>
   </f7-page>
 </template>
