@@ -5,14 +5,14 @@
       <f7-nav-left>
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
       </f7-nav-left>
-      <f7-nav-title sliding>myapp</f7-nav-title>
+      <f7-nav-title sliding>TechCel</f7-nav-title>
       <!--filtrar busqueda de acuerdo con los productos-->
       <f7-nav-right>
         <f7-link class="searchbar-enable" data-searchbar=".searchbar-demo" icon-ios="f7:search"
           icon-md="material:search" />
       </f7-nav-right>
       <f7-searchbar class="searchbar-demo" expandable search-container=".search-list" search-in=".item-title" />
-      <f7-list strong-ios outline-ios dividers-ios class="searchbar-not-found">
+      <f7-list media-list dividers-ios strong-ios outline-ios class="searchbar-not-found">
         <f7-list-item title="Nothing found" />
       </f7-list>
       <f7-nav-title-large>
@@ -25,8 +25,8 @@
       <f7-link></f7-link>
     </f7-toolbar>
     <!-- Page content-->
-    <f7-page>
-      <f7-block-title>MOBILES</f7-block-title>
+    <f7-page class="search-list searchbar-found">
+      <f7-block-title>PRODUCTOS</f7-block-title>
       <f7-list media-list dividers-ios strong-ios outline-ios>
         <f7-list-item link="#" title="iPhone 14 Pro" after="$1.000" subtitle="Apple"
           text="Una manera mágica de interactuar con tu iPhone. Una funcionalidad de seguridad diseñada para salvar vidas. Una innovadora cámara gran angular de 48 MP. Y una pantalla hasta dos veces más brillante bajo el sol.◊Consultar los avisos legales Todo gracias a la potencia del ultrarrápido chip A16 Bionic.">
@@ -62,9 +62,6 @@ El almacenamiento y la RAM disponibles son inferiores a la memoria total debido 
               width="80" />
           </template>
         </f7-list-item>
-      </f7-list>
-      <f7-block-title>ACCESORIOS</f7-block-title>
-      <f7-list media-list dividers-ios strong-ios outline-ios>
         <f7-list-item link="#" title="Cargador de pared Apple USB-C 20W" after="$1.000" subtitle="Apple"
           text="El adaptador de corriente USB-C de 20 W de Apple es muy rápido y eficiente, así que va de perlas para cargar tus dispositivos en cualquier lugar. 
                 Aunque es compatible con cualquier dispositivo con USB-C, Apple recomienda usarlo con el iPad Pro y el iPad Air para lograr un rendimiento óptimo. 
@@ -100,9 +97,6 @@ AC AdapterIPHONE: iPhone 14 Pro Max, iPhone 14 Pro, iPhone 14 Plus, iPhone 14, i
               width="80" />
           </template>
         </f7-list-item>
-      </f7-list>
-      <f7-block-title>AUDIO</f7-block-title>
-      <f7-list media-list dividers-ios strong-ios outline-ios>
         <f7-list-item link="#" title="AirPods (3ra generación) con carga MagSafe" after="$1.000" subtitle="Apple"
           text="Los AirPods no pesan nada y ofrecen un ajuste anatómico. Se colocan en el ángulo perfecto para darte un mayor confort y llevar el sonido directamente a tus oídos. Además, son un 33 % más cortos que los AirPods (2.ª generación) e incluyen un sensor de presión que te permite controlar la música y las llamadas fácilmente.">
           <template #media>
@@ -140,6 +134,14 @@ AC AdapterIPHONE: iPhone 14 Pro Max, iPhone 14 Pro, iPhone 14 Plus, iPhone 14, i
   </f7-page>
 </template>
 <script>
+import {
+  f7Searchbar,
+  f7List,
+  f7ListItem,
+  f7Link,
+  f7NavRight,
+  theme,
+} from 'framework7-vue';
 import { f7Navbar, f7Page, f7BlockTitle } from 'framework7-vue';
 import { firestore } from "../js/fb"
 import { collection, addDoc } from "firebase/firestore";
@@ -149,18 +151,32 @@ export default {
     f7Navbar,
     f7Page,
     f7BlockTitle,
+    f7Searchbar,
+    f7List,
+    f7ListItem,
+    f7Link,
+    f7NavRight,
   },
-  async created(){
+  data() {
+    return {
+      theme,
+    };
+  },
+  async created() {
     try {
-  const docRef = await addDoc(collection(firestore, "users"), {
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-  });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
-}
+      const docRef = await addDoc(collection(firestore, "users"), {
+        first: "",
+        last: "",
+        email: "",
+        password: "",
+        phone: "",
+        gen: "",
+        born: ""
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   }
 };
 </script>
