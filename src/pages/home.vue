@@ -141,6 +141,8 @@ AC AdapterIPHONE: iPhone 14 Pro Max, iPhone 14 Pro, iPhone 14 Plus, iPhone 14, i
 </template>
 <script>
 import { f7Navbar, f7Page, f7BlockTitle } from 'framework7-vue';
+import { firestore } from "../js/fb"
+import { collection, addDoc } from "firebase/firestore";
 
 export default {
   components: {
@@ -148,5 +150,17 @@ export default {
     f7Page,
     f7BlockTitle,
   },
+  async created(){
+    try {
+  const docRef = await addDoc(collection(firestore, "users"), {
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815
+  });
+  console.log("Document written with ID: ", docRef.id);
+} catch (e) {
+  console.error("Error adding document: ", e);
+}
+  }
 };
 </script>

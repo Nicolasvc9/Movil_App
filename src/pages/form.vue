@@ -8,11 +8,11 @@
 
       <f7-list-input label="Apellidos" type="text" placeholder="Tu apellido"></f7-list-input>
 
-      <f7-list-input label="E-mail" type="email" placeholder="E-mail"></f7-list-input>
+      <f7-list-input label="E-mail" type="text" placeholder="E-mail"></f7-list-input>
 
-      <f7-list-input label="Contraseña" type="password" placeholder="Contraseña"></f7-list-input>
+      <f7-list-input label="Contraseña" type="text" placeholder="Contraseña"></f7-list-input>
 
-      <f7-list-input label="Numero de telefono" type="tel" placeholder="Numero"></f7-list-input>
+      <f7-list-input label="Numero de telefono" type="text" placeholder="Numero"></f7-list-input>
 
       <f7-list-input label="Genero" type="select">
         <option>Masculino</option>
