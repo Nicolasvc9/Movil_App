@@ -19,12 +19,11 @@
         <f7-block-title>Ingresar</f7-block-title>
         <f7-list>
           <f7-list-item link="/login/" view=".view-main" panel-close title="Iniciar Sesion"></f7-list-item>
-          <f7-list-item link="/form/" view=".view-main" panel-close title="Registrase"></f7-list-item>
+          <f7-list-item link="/register/" view=".view-main" panel-close title="Registrase"></f7-list-item>
         </f7-list>
       </f7-page>
     </f7-view>
   </f7-panel>
-
 
   <!-- Right panel with reveal effect-->
   <f7-panel right reveal dark>
