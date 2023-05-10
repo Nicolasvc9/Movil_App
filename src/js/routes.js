@@ -1,7 +1,7 @@
 
 import HomePage from '../pages/home.vue';
 import AboutPage from '../pages/about.vue';
-import FormPage from '../pages/form.vue';
+//import FormPage from '../pages/register.vue';
 
 import DynamicRoutePage from '../pages/dynamic-route.vue';
 import RequestAndLoad from '../pages/request-and-load.vue';
@@ -11,11 +11,11 @@ import Login from '../pages/login.vue'
 import Phones from '../pages/phones.vue';
 import Accessories from '../pages/accessories.vue'
 import Earphones from '../pages/earphones.vue';
+import Register from '../pages/register.vue'
 
 var routes = [
   {
     path: '/',
-    //component: Login
     component: HomePage,
   },
   {
@@ -23,8 +23,8 @@ var routes = [
     component: AboutPage,
   },
   {
-    path: '/form/',
-    component: FormPage,
+    path: '/register/',
+    component: Register,
   },
   {
     path: '/login/',
