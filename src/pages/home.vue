@@ -32,7 +32,7 @@
           text="Una manera mágica de interactuar con tu iPhone. Una funcionalidad de seguridad diseñada para salvar vidas. Una innovadora cámara gran angular de 48 MP. Y una pantalla hasta dos veces más brillante bajo el sol.◊Consultar los avisos legales Todo gracias a la potencia del ultrarrápido chip A16 Bionic.">
           <template #media>
             <img style="border-radius: 8px"
-              src="https://lh3.googleusercontent.com/PN7U9AA1v_BYPG5kLhZOMjINsFXK0SXqKXUXxlutI_81ovOI61jxUM-jDxk_jLnvhjUXbw2NmfCtvHHqceDEgWFQyBgTFfpxSy4jtytX"
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-XgdnMV0XDL44Cqp401aQn6d4ceiIAW7PTJXJwGKR6jFS-66W"
               width="80" />
           </template>
         </f7-list-item>
