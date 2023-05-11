@@ -143,8 +143,7 @@ import {
   theme,
 } from 'framework7-vue';
 import { f7Navbar, f7Page, f7BlockTitle } from 'framework7-vue';
-import { firestore } from "../js/fb"
-import { collection, addDoc } from "firebase/firestore";
+import { addDocument } from "../js/fb"
 
 export default {
   components: {
@@ -162,21 +161,5 @@ export default {
       theme,
     };
   },
-  async created() {
-    try {
-      const docRef = await addDoc(collection(firestore, "users"), {
-        first: "",
-        last: "",
-        email: "",
-        password: "",
-        phone: "",
-        gen: "",
-        born: ""
-      });
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-  }
 };
 </script>
