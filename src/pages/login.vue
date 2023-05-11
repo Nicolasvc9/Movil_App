@@ -7,7 +7,7 @@
     <f7-list strong-ios dividers-ios inset-ios>
       <f7-list-input
         outline
-        label="Name"
+        label="e-mail"
         floating-label
         type="text"
         placeholder="Your name"

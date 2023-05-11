@@ -1,6 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
+import { collection, addDoc } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -18,6 +19,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app)
 
+const addDocument = async (table, data) => {
+  return await addDoc(collection(firestore, table), data);
+}
+
 export {
     firestore,
+    addDocument
 }
